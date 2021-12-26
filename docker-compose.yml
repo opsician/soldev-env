@@ -5,8 +5,7 @@ services:
     container_name: sc-generator
     volumes:
       - ./sol:/sol
-      - ./id.json:/root/.config/solana/id.json
-      - ./config.yml:/root/.config/solana/cli/config.yml
+      - ./solana-config:/root/.config/solana
     stdin_open: true
     tty: true
     command: ["tail", "-f", "/dev/null"]
