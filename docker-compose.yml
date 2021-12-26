@@ -1,0 +1,12 @@
+version: '3'
+services:
+  sc-generator:
+    build: .
+    container_name: sc-generator
+    volumes:
+      - ./sol:/sol
+      - ./id.json:/root/.config/solana/id.json
+      - ./config.yml:/root/.config/solana/cli/config.yml
+    stdin_open: true
+    tty: true
+    command: ["tail", "-f", "/dev/null"]
