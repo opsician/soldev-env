@@ -1,8 +1,8 @@
 version: '3'
 services:
-  sc-generator:
+  sc-tool:
     build: .
-    container_name: sc-generator
+    container_name: sc-tool
     volumes:
       - ./sol:/sol
       - ./solana-config:/root/.config/solana
